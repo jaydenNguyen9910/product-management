@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS Product;
+
+CREATE TABLE Product (
+    id INT NOT NULL,
+    price FLOAT NOT NULL DEFAULT '0',
+    name VARCHAR(255) NOT NULL,
+    description VARCHAR(255) DEFAULT NULL,
+    quantity INT NOT NULL DEFAULT '0',
+    PRIMARY KEY (id)
+);
