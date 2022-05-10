@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: singleproductmanagement 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: singleproductmanagement
+  template:
+    metadata:
+      labels:
+        app: singleproductmanagement 
+    spec:
+      containers:
+        - name: singleproductmanagement 
+          image: acrbcasolutionsvn.azurecr.io/singleproductmanagement
+          ports:
+          - containerPort: 80
